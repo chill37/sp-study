@@ -1,3 +1,5 @@
+//Reading/Writing Binary File
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,7 +9,6 @@ import java.io.OutputStream;
 public class BinaryFileReadWrite {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		CopyFile("test.txt","test2.txt");
 	}
 	

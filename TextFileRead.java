@@ -1,3 +1,5 @@
+//Reading File
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -5,9 +7,7 @@ import java.io.FileReader;
 public class TextFileRead {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		PrintFile("test.txt");
-
 	}
 	
 	static void PrintFile(String fileName) {
