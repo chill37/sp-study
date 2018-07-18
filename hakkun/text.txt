@@ -1,0 +1,8 @@
+1.5x5 3x3 필터
+n = 5
+for (i=1; i<n-1 ; i ++) for(j=1; j<n-1; j++) sum+= data[i-1][j-1]...;
+
+2.최소편집거리 알고리즘
+https://m.blog.naver.com/PostView.nhn?blogId=ndb796&logNo=220870218783&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
+
+
