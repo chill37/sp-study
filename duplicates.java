@@ -33,5 +33,41 @@ public class Duplicates {
 		}
 		return newList;
 	}
+	
+	private static String getCompressedLine(String line) {
+		StringBuilder sb = new StringBuilder();
+		char prev = line.charAt(0);
+		int count = 1;
+		for(int i=1; i<line.length(); i++) {
+			char ch = line.charAt(i);
+			if(ch == prev) {
+				count++;
+			} else {
+				if(count > 2) {
+					//compress
+					sb.append(count);
+					sb.append(prev);
+				} else {
+					for(int j=0; j<count; j++) {
+						sb.append(prev);
+					}
+				}
+				//init
+				prev = ch;
+				count = 1;
+			}
+		}
+		//last character
+		if(count > 2) {
+			//compress
+			sb.append(count);
+			sb.append(prev);
+		} else {
+			for(int j=0; j<count; j++) {
+				sb.append(prev);
+			}
+		}
+		return sb.toString();
+	}
 
 }
