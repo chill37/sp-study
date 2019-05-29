@@ -12,6 +12,19 @@ public class TextFileWrite {
 		UseFileWriter("textwrite1.txt");
 
 	}
+	
+	static void writeListToFile(List<String> list, String outputFileName) throws IOException {
+		File file = new File(".", outputFileName);
+		
+		FileWriter fw = new FileWriter(file);
+		
+		for(String s: list) {
+			String data = s+"\r\n";
+			fw.write(data);
+		}
+		fw.close();
+		
+	}
 
 	private static void UseFileWriter(String outputFileName) throws IOException {
 		File file = new File("./TEXT/", outputFileName);
