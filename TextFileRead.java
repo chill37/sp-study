@@ -10,6 +10,23 @@ public class TextFileRead {
 		PrintFile("test.txt");
 	}
 	
+	static List<String> readFileAsList(String fileName) {
+		String line= null;
+		List<String> list = new ArrayList<>();
+		try {
+			File file = new File("./", fileName);
+			FileReader reader = new FileReader(file);
+			BufferedReader br = new BufferedReader(reader);
+			
+			while((line=br.readLine()) != null) {
+//				System.out.println(line);
+				list.add(line);
+			}
+			
+		} catch (Exception e ) {}
+		return list;
+	}
+	
 	static void PrintFile(String fileName) {
 		String line = null;
 		
