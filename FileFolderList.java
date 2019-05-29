@@ -3,11 +3,14 @@ import java.io.File;
 public class FileFolderList {
 
 	public static void main(String[] args) {
-		FileFolderList();
+		List<File> list = new ArrayList<>();
+		String name=getFileFromFolders("BIGFILE", list, "ABCDFILE.TXT", null);
+		System.out.println(name);
+		PrintFile(name);
 	}
 
 	// only 1 layer folder
-	static void FileFolderList() {
+	static void fileFolderList() {
 		File folder = new File(".");
 		File[] fList = folder.listFiles();
 
